@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<div id="header">
+		<h1>Tic-Tac-Toe</h1>
+		<h4>
+			Damon Alcorn 
+			<br > 
+			CS 46 - Spring 2015
+			<br >
+			Honors Credit Project
+		</h4>
+	</div>
+	<div id="prompt" class="blink">
+		Hello Dr. Falken.
+	</div>
+	<div id="content">
+		<div id="gameBoard" class="mainDiv">
+			<h3>Game Board</h3>
+			<form id="gameControls">
+				<button type="button" id="startButton">Start</button>
+				<br >
+				<label for="whoseTurn">Whose Turn?</label>
+				<input type="text" id="whoseTurn" value="Player 1" readonly>
+			</form>
+			<div id="gameSquaresContainer">
+				<button type="button" id="squareA" class="gameSquare row1 column1"></button>
+				<button type="button" id="squareB" class="gameSquare row1 column2"></button>
+				<button type="button" id="squareC" class="gameSquare row1 column3"></button>
+				<button type="button" id="squareD" class="gameSquare row2 column1"></button>
+				<button type="button" id="squareE" class="gameSquare row2 column2"></button>
+				<button type="button" id="squareF" class="gameSquare row2 column3"></button>
+				<button type="button" id="squareG" class="gameSquare row3 column1"></button>
+				<button type="button" id="squareH" class="gameSquare row3 column2"></button>
+				<button type="button" id="squareI" class="gameSquare row3 column3"></button>
+			</div>
+		</div>
+			
+		<div id="player1SetUp" class="mainDiv">
+			<h3>Player 1 Setup</h3>
+			<button type="button" id="player1Confirm">Confirm</button>
+			<form id="player1Form">
+				<label for="player1Select">Type:</label>
+				<select id="player1Select">
+					<option value="Human">Human</option>
+					<option value="Computer">Computer</option>
+				</select>
+				<br >
+				<label id="player1AITypeSelectLabel" for="player1AITypeSelect">AI:</label>
+				<select id="player1AITypeSelect">
+					<option value="Random">Random</option>
+					<option value="Reflex">Reflex</option>
+					<option value="Minimax">Minimax</option>
+					<option value="Minimax w/ AB">Minimax w/ AB</option>
+					<option value="Expectimax">Expectimax</option>
+				</select>
+				<br />
+				<label id="player1NodesCheckedLabel" for="player1NodesChecked">Moves checked last turn</label>
+				<input type="text" id="player1NodesChecked" value="0" readonly>
+				<br />
+				<label id="player1TimeTakenLabel" for="player1TimeTaken">Time taken last turn</label>
+				<input type="text" id="player1TimeTaken" value="0.000 seconds" readonly>
+			</form>
+		</div>
+	
+		<div id="player2SetUp" class="mainDiv"">
+			<h3>Player 2 Setup</h3>
+			<button type="button" id="player2Confirm">Confirm</button>
+			<form id="player2Form">
+				<label for="player2Select">Type:</label>
+				<select id="player2Select">
+					<option value="Human">Human</option>
+					<option value="Computer">Computer</option>
+				</select>
+				<br >
+				<label id="player2AITypeSelectLabel" for="player2AITypeSelect">AI:</label>
+				<select id="player2AITypeSelect">
+					<option value="Random">Random</option>
+					<option value="Reflex">Reflex</option>
+					<option value="Minimax">Minimax</option>
+					<option value="Minimax w/ AB">Minimax w/ AB</option>
+					<option value="Expectimax">Expectimax</option>
+				</select>
+				<br />
+				<label id="player2NodesCheckedLabel" for="player2NodesChecked">Moves checked last turn</label>
+				<input type="text" id="player2NodesChecked" value="0" readonly>
+				<br />
+				<label id="player2TimeTakenLabel" for="player2TimeTaken">Time taken last turn</label>
+				<input type="text" id="player2TimeTaken" value="0.000 seconds" readonly>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="jquery.js"></script> 
+	<script type="text/javascript" src="gameSetupScript.js"></script>
+	<script type="text/javascript" src="gamePlayScript.js"></script>
+</body>
+</html>
